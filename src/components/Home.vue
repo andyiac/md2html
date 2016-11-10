@@ -6,17 +6,11 @@
                 <user-item :user="user"></user-item>
             </li>
         </ul>
+        <div class="load-more">
+            <div><span>load more</span></div> 
+        </div>
     </div>
 </template>
-
-
-<style lang="stylus">
-    #home-wrap
-        margin 0 auto
-        max-width 978px
-        margin-top 20px
-</style>
-
 
 <script>
     import UserItem from './users/UserItem.vue'
@@ -42,15 +36,31 @@
 </script>
 
 <style lang="stylus">
+    #home-wrap
+        margin 0 auto
+        max-width 978px
+        margin-top 20px
+        .title
+            margin 15px 0
+
     .user-item
         list-style none 
-        border 1px solid #eee;
+        border 1px solid #eee
         border-top none
         background-color #fafafa
-
     .user-item:nth-of-type(even) 
         background-color #fff
-    
-
+    .load-more
+        width 160px
+        cursor pointer
+        height 40px
+        text-align center
+        margin 20px auto   
+        border-radius 4px 
+        border 1px solid #eee
+        span
+            cursor pointer
+            height 40px
+            line-height 40px
     
 </style>
