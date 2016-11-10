@@ -38,13 +38,7 @@
             }
         },
         created(){
-            UserAction.getTrendingUsers(this,(res)=>{
-                console.log("------get---"+ JSON.stringify(res))
-                this.page += 1
-                for (var i=0;i<res.length; i++){
-                    this.users.push(res[i])
-                }
-            })
+            this.loadNextPage()
         }
     }
 </script>
