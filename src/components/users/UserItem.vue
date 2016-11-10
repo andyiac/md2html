@@ -25,7 +25,6 @@
         margin 0
         padding 0
     #user-item-wrap
-        margin 1px
         padding 10px 0
         height 60px
         width 100%
