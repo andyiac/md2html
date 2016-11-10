@@ -50,6 +50,7 @@
         margin-top 20px
         .title
             margin 15px 0
+            font-size 20px
 
     .user-item
         list-style none 
