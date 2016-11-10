@@ -25,7 +25,7 @@
         .content
             max-width 978px
             margin  auto
-            padding 20px 0 
+            padding 30px 0 
             .logo
                 letter-spacing 1px
                 a
