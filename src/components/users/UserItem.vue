@@ -2,13 +2,14 @@
    <div id="user-item-wrap">
         <img class="avatar" :src=avatarUrl >
         <p class="name">{{ user.login }} </p>
+        <p class="rank"> {{ index }}</p>
    </div> 
 </template>
 
 
 <script>
     export default {
-        props: ['user'],
+        props: ['user','index'],
         data: function(){
             return {
                 avatarUrl:""
@@ -30,18 +31,21 @@
         width 100%
         line-height 60px
         .avatar 
-            clear left 
             display block
+            float left 
             width 56px
             height 56px
-            float left 
-            margin-left 10px
+            margin-left 20px
             border-radius 50%
             border 2px solid grey
-            overflow hidden
         .name 
+            display bolck
+            float left
+            margin-left 20px
+            width 160px
+        .rank
             margin-left 20px
             display block
-            display inline-block
+            float left
     
 </style>

@@ -2,8 +2,8 @@
     <div id="home-wrap">
         <p class="title"> Trending users from china</p>
         <ul>
-            <li class="user-item" v-for="user in users">
-                <user-item :user="user"></user-item>
+            <li class="user-item" v-for="(user, index) in users">
+                <user-item :user="user" :index="index"></user-item>
             </li>
         </ul>
         <div class="load-more">
