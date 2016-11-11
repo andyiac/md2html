@@ -1,5 +1,6 @@
 # githot-vue
 
+GitHot.io 是一个基于 vue2.0 的帮你迅速查看 GitHub Trending 的开源项目 
 
 www.githot.io
 
