@@ -3,6 +3,8 @@
         <img class="avatar" :src=avatarUrl >
         <p class="name">{{ user.login }} </p>
         <p class="rank"> {{ index }}</p>
+
+        <div class="more">more</div>
    </div> 
 </template>
 
@@ -47,5 +49,9 @@
             margin-left 20px
             display block
             float left
-    
+        .more 
+            width 50px
+            float right  
+            margin-right 10px
+
 </style>
