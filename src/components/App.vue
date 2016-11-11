@@ -7,6 +7,11 @@
                 </div>
             </div>
         </div>
+        <div class="menu">
+            <router-link to="/"> hot user</router-link> 
+            <router-link to="/repostest"> repostest </router-link> 
+            <router-link to="/about"> about </router-link> 
+        </div>
         <router-view
             class="view"
             >
