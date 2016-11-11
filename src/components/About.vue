@@ -3,19 +3,13 @@
         <div class="title"> 关于 </div>
         <div class="content">
             <p>
-                GitHot is an Android App that will help you find world most popular project and person . <br>
+                GitHot is an project that will help you find world most popular project and person . <br>
+                
+                你可以从 <a href="http://github.com/andyiac/githot">GitHot Android </a> 开源项目感兴趣 . <br>
 
-                Official website http://githot.io ,and the web version is incoming . <br>
+                或许还可能对 coderyi同学的 iOS GitHub 开源客户端  <a href="https://github.com/coderyi/monkey">Monkey</a> 感兴趣 .<br>
 
-                Besides, you can get iOS version Monkey by coderyi from itunes . <br>
-
-                Try githot from the link below <br>
-
-                fir <br>
-
-                google play <br>
-
-                GitHot use api link  <br>
+                关于 GitHot 如果你有一些神奇的想法，欢迎和我交流 :-D ，在下微信 andyiac (添加请注明 githot 交流) <br>
             </p>
         </div>
     </div>
