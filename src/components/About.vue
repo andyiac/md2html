@@ -5,7 +5,7 @@
             <p>
                 GitHot is an project that will help you find world most popular project and person . <br>
                 
-                你可以从 <a href="http://github.com/andyiac/githot">GitHot Android </a> 开源项目感兴趣 . <br>
+                你也可能对 <a href="http://github.com/andyiac/githot">GitHot  </a> Android 开源项目感兴趣 . <br>
 
                 或许还可能对 coderyi同学的 iOS GitHub 开源客户端  <a href="https://github.com/coderyi/monkey">Monkey</a> 感兴趣 .<br>
 
