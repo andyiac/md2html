@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="menu">
-                    <!--<router-link to="/repostest"> Repos</router-link> -->
+                    <router-link to="/repos"> Repos</router-link> 
                     <router-link to="/about"> About </router-link> 
                 </div>
             </div>
@@ -40,6 +40,7 @@
                 float right
                 line-height 90px
                 a
+                    margin-left 20px
                     text-decoration none
 
 </style>

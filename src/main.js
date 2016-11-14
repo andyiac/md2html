@@ -5,7 +5,7 @@ import Axios from 'axios'
 
 import App from './components/App.vue'
 import Home from './components/Home.vue'
-import ReposItem from './components/repos/ReposItem.vue'
+import ReposHome from './components/repos/ReposHome.vue'
 import About from './components/About.vue'
 
 Vue.use(Router)
@@ -21,8 +21,8 @@ const router = new Router({
             component: Home
         },
         {
-            path: '/repostest',
-            component: ReposItem
+            path: '/repos',
+            component: ReposHome
         },
         {
             path: '/about',
