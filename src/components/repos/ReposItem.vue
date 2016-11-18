@@ -1,6 +1,7 @@
 <template>
     <div id="repo-wrap">
         <div class="item"><a :href=repo.html_url  target="_blank"> {{ this.linkName }}</a></div>
+        <div class="avatar"> <a href=""><img src="" alt=""></a></div>
     </div>
 </template>
 
