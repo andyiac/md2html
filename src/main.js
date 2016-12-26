@@ -4,7 +4,6 @@ import VueResource from 'vue-resource'
 import Axios from 'axios'
 
 import App from './components/App.vue'
-import Home from './components/Home.vue'
 import ReposHome from './components/repos/ReposHome.vue'
 import About from './components/About.vue'
 
@@ -18,7 +17,7 @@ const router = new Router({
     routes: [
         {
             path: '/',
-            component: Home
+            component: ReposHome
         },
         {
             path: '/repos',

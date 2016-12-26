@@ -1,15 +1,27 @@
 <template>
     <div id="repo-wrap">
         <div class="item">
-            <a  class="content" :href=repo.html_url  target="_blank"> 
+            <a  class="content" :href=current_url  target="_blank"> 
                 <div class="avatar"> </div>
-                <div class="name"> {{ repo.name }} </div>
-                <div class="desc"> {{ repo.description }}</div>
+                <div class="name"> {{ repo.title }} </div>
             </a>
         </div>
         
     </div>
 </template>
+
+
+<script>
+export default{
+    props:['repo'],
+    data:function(){
+        return{
+            // http://localhost:9090/api/get_blog/?id=20
+            current_url: "/api/get_blog/?id=" + this.repo.id
+        }
+    }
+}
+</script>
 
 <style lang="stylus">
 
@@ -17,6 +29,7 @@
     width 100%
     height 60px 
     .item
+        cursor pointer
         position relative
         padding-left 10px
     .item a:before , .item a:after
@@ -40,14 +53,14 @@
             text-align left
             float left
             line-height 60px
-            max-width 280px
+            max-width 500px 
             white-space nowrap
             text-overflow ellipsis
             overflow hidden
             height 100%
             color #555459
             margin-left 10px
-            font-weight 700
+            font-weight 600
         .desc 
             margin-left 10px
             line-height 60px
@@ -65,13 +78,3 @@
     
 </style>
 
-<script>
-export default{
-    props:['repo'],
-    data:function(){
-        return{
-            linkName: this.repo.html_url.substring(19,this.repo.html_url.length)
-        }
-    }
-}
-</script>

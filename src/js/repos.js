@@ -17,6 +17,14 @@ export default {
         },(err)=>{
             console.log("---getRepos error ---> " + JSON.stringify(err));
         })
+    },
+
+    getBlogList: function(ctx, cb){
+        ctx.$http.get("/api/list_all_blog/").then((res)=>{
+            if(cb) cb(res.data.data.blog_list)
+        },(err)=>{
+            console.log("---getRepos error ---> " + JSON.stringify(err));
+        })   
     }
 
 }

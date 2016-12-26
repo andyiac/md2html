@@ -1,9 +1,9 @@
 <template>
     <div id="home-wrap">
-        <p class="title"> Trending Java Repos</p>
+        <p class="title"> all blogs </p>
         <ul>
-            <li class="repo-item" v-for="(repo, index) in repos">
-                <repos-item :repo="repo" :index="index"></repos-item>
+            <li class="repo-item" v-for="(blog, index) in blogs">
+                <repos-item :repo="blog" :index="index"></repos-item>
             </li>
         </ul>
         <div class="load-more">
@@ -29,16 +29,24 @@
                         this.repos.push(res[i])
                     }
                 })
+            },
+            listAllBlog: function(){
+                ReposAction.getBlogList(this,(res)=>{
+                    for( var i=0; i<res.length; i++){
+                        this.blogs.push(res[i])
+                    }
+                })
             }
         },
         data: function(){
             return {
                 repos:[],
-                page:1 
+                page:1,
+                blogs:[]
             }
         },
         created(){
-            this.loadNextPage()
+            this.listAllBlog()
         }
     }
 </script>

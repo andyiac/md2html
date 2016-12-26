@@ -3,7 +3,7 @@
         <div id="header">
             <div class="content">
                 <div class="logo">
-                    <a href="/">GitHot</a>
+                    <a href="/">42GATE</a>
                 </div>
 
                 <div class="menu">
