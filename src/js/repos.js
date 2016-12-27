@@ -25,6 +25,15 @@ export default {
         },(err)=>{
             console.log("---getRepos error ---> " + JSON.stringify(err));
         })   
+    },
+
+    //http://localhost:9090/api/get_blog/?id=20
+    getBlogDetail: function(ctx, id, cb){
+        ctx.$http.get("/api/get_blog/?id=" + id ).then((res)=>{
+            if(cb) cb(res.data.data.content)
+        },(err)=>{
+            console.log("---getRepos error ---> " + JSON.stringify(err));
+        })   
     }
 
 }

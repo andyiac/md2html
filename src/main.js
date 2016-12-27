@@ -6,13 +6,14 @@ import Axios from 'axios'
 import App from './components/App.vue'
 import ReposHome from './components/repos/ReposHome.vue'
 import About from './components/About.vue'
+import BlogDetail from './components/blog/BlogDetails.vue'
 
 Vue.use(Router)
 Vue.use(VueResource)
 
 
 const router = new Router({
-    mode: 'history',
+    // mode: 'history',
     base: __dirname,
     routes: [
         {
@@ -22,6 +23,10 @@ const router = new Router({
         {
             path: '/repos',
             component: ReposHome
+        },
+        {
+            path: '/blog-detail',
+            component: BlogDetail
         },
         {
             path: '/about',

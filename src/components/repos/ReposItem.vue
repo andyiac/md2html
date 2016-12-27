@@ -1,15 +1,13 @@
 <template>
     <div id="repo-wrap">
         <div class="item">
-            <a  class="content" :href=current_url  target="_blank"> 
+            <a  class="content" :href="'/#/blog-detail/?id=' + repo.id"  target="_blank"> 
                 <div class="avatar"> </div>
                 <div class="name"> {{ repo.title }} </div>
             </a>
         </div>
-        
     </div>
 </template>
-
 
 <script>
 export default{
@@ -73,8 +71,5 @@ export default{
         text-decoration none
         display block
         color #9e9ea6
-
-
-    
 </style>
 
