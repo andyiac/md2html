@@ -51,7 +51,7 @@ export default{
             text-align left
             float left
             line-height 60px
-            max-width 500px 
+            width 92% 
             white-space nowrap
             text-overflow ellipsis
             overflow hidden

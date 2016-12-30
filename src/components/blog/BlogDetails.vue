@@ -17,8 +17,10 @@ export default {
     },
     methods:{
         getBlogContent: function(){
-            BlogAction.getBlogDetail(this, this.blogId, (res)=>{
-                this.blogContent = res
+            BlogAction.getBlogDetail(this, this.blogId, (blog)=>{
+                this.blogContent = blog.content
+                document.title = blog.title
+                console.log(JSON.stringify(blog));
             })
         }
     },

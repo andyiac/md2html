@@ -682,5 +682,8 @@
 .markdown-body hr {
   border-bottom-color: #eee;
 }
+.markdown-body audio {
+      width: 100%;
+}
 
 </style>

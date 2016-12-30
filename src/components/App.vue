@@ -5,14 +5,11 @@
                 <div class="logo">
                     <a href="/">42GATE</a>
                 </div>
-
                 <div class="menu">
-                    <router-link to="/repos"> Repos</router-link> 
+                    <!-- <router-link to="/repos"> Repos</router-link>  -->
                     <router-link to="/about"> About </router-link> 
                 </div>
             </div>
-
-
         </div>
         <router-view class="view"> </router-view>
     </div>

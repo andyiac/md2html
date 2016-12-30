@@ -23,8 +23,7 @@
         .title
             font-size  20px
         .content
-            padding 20px
-            background-color #f5f5f5
+            min-height 400px
             margin-top 10px
             p
                 line-height 2

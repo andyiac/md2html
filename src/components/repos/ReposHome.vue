@@ -1,6 +1,6 @@
 <template>
     <div id="home-wrap">
-        <p class="title"> all blogs </p>
+        <p class="title">blogs </p>
         <ul>
             <li class="repo-item" v-for="(blog, index) in blogs">
                 <repos-item :repo="blog" :index="index"></repos-item>
