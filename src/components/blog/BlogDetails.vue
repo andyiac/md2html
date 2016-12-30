@@ -6,17 +6,17 @@
                 <br>
             </div>
         </div>
-
-        <footer class="footer">
-            
-        </footer>
+        <bottom-footer></bottom-footer>
     </div>
 </template>
 
 <script>
 import BlogAction from '../../js/repos.js'
 import GithubMarkdown from './GithubMarkdown.vue'
+import BottomFooter from '../BottomFooter.vue'
+
 export default {
+    components:{BottomFooter},
     mixins: [GithubMarkdown],
     data: function(){
         return {
@@ -49,13 +49,11 @@ export default {
         .content
             min-height 600px
             margin 40px auto
-            width 800px
+            max-width 820px
+            padding 0 10px
             .content-footer
                 margin-top 40px
                 height 80px
                 border-top 1px solid #eee
-        .footer
-            background #f5f5f5
-            width 100%
-            height 200px
+      
 </style>

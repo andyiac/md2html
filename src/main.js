@@ -7,6 +7,7 @@ import App from './components/App.vue'
 import ReposHome from './components/repos/ReposHome.vue'
 import About from './components/About.vue'
 import BlogDetail from './components/blog/BlogDetails.vue'
+import HomePage from './components/HomePage.vue'
 
 Vue.use(Router)
 Vue.use(VueResource)
@@ -18,6 +19,14 @@ const router = new Router({
     routes: [
         {
             path: '/',
+            component: ReposHome
+        },
+        {
+            path: '/home',
+            component: HomePage
+        },
+        {
+            path: '/timeline',
             component: ReposHome
         },
         {

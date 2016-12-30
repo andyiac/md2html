@@ -1,23 +1,25 @@
 <template>
-    <div id="home-wrap">
-        <p class="title">blogs </p>
-        <ul>
-            <li class="repo-item" v-for="(blog, index) in blogs">
-                <repos-item :repo="blog" :index="index"></repos-item>
-            </li>
-        </ul>
-        <div class="load-more">
-            <div @click="loadNextPage"><span>load more</span></div> 
+    <div id="timeline-wrap">
+        <div class="content-wrap">
+            <p class="title">blogs </p>
+            <ul>
+                <li class="repo-item" v-for="(blog, index) in blogs">
+                    <repos-item :repo="blog" :index="index"></repos-item>
+                </li>
+            </ul>
         </div>
+        <bottom-footer></bottom-footer>
     </div>
 </template>
 
 <script>
     import ReposItem from './ReposItem.vue'
+    import BottomFooter from '../BottomFooter.vue'
     import ReposAction from '../../js/repos.js'
+
     export default{
         components: {
-            ReposItem 
+            ReposItem ,BottomFooter
         },
         methods:{
             loadNextPage: function(){
@@ -52,26 +54,19 @@
 </script>
 
 <style lang="stylus">
-    #home-wrap
-        margin 0 auto
-        max-width 800px
-        margin-top 20px
-        .title
-            margin 30px 0
-            font-size 20px
+    #timeline-wrap
+        .content-wrap
+            margin 0 auto
+            max-width 820px
+            padding 0 10px
+            margin-top 20px
+            margin-bottom 60px
+            .title
+                margin 30px 0
+                font-size 20px
     .repo-item
         list-style none 
-    .load-more
-        width 160px
-        cursor pointer
-        height 40px
-        text-align center
-        margin 20px auto   
-        border-radius 4px 
-        border 1px solid #eee
-        span
-            cursor pointer
-            height 40px
-            line-height 40px
+
+
     
 </style>
