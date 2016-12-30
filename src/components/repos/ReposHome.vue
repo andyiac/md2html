@@ -66,7 +66,4 @@
                 font-size 20px
     .repo-item
         list-style none 
-
-
-    
 </style>

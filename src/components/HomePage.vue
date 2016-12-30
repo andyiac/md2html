@@ -1,20 +1,33 @@
 <template>
     <div id="home-wrap">
-        <div class="title"> home page  </div>
-        <div class="content">
-            <p>
-                home page 如果你有神器的想法欢迎和我交流
-            </p>
+        <div class="content-wrap">
+            <div class="title"> home page  </div>
+            <div class="content">
+                <p>
+                    home page 如果你有神器的想法欢迎和我交流
+                </p>
+            </div>
         </div>
+        <bottom-footer></bottom-footer>
     </div>
 </template>
 
+<script>
+
+import BottomFooter from './BottomFooter.vue'
+
+export default {
+    components:{ BottomFooter }
+}
+</script>
+
 <style lang='stylus'>
-    #home-wrap
-        margin 0 auto
-        width 820px
+#home-wrap
+    margin-top 20px
+    .content-wrap
         padding 0 10px
-        margin-top 20px
+        margin 0 auto
+        max-width 820px
         .title
             font-size  20px
             border-bottom 1px solid #eee
