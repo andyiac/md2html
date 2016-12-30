@@ -190,7 +190,7 @@
 }
 
 .markdown-body a {
-  color: #4078c0;
+  color: #42b983;
   text-decoration: none;
 }
 

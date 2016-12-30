@@ -7,11 +7,11 @@
                 </div>
                 <div class="menu">
                     <!-- <router-link to="/repos"> Repos</router-link>  -->
-                    <router-link to="/about"> Home </router-link> 
-                    <router-link to="/">      TimeLine </router-link> 
-                    <router-link to="/about"> Category </router-link> 
-                    <router-link to="/about"> Contact</router-link> 
-                    <router-link to="/about"> About </router-link> 
+                    <router-link class="nav" to="/about"> Home</router-link> 
+                    <router-link class="nav" to="/">      TimeLine</router-link> 
+                    <router-link class="nav" to="/about"> Category</router-link> 
+                    <router-link class="nav" to="/about"> Contact</router-link> 
+                    <router-link class="nav" to="/about"> About </router-link> 
                 </div>
             </div>
         </div>
@@ -42,8 +42,17 @@
             .menu
                 float right
                 line-height 90px
-                a
+                .nav
                     margin-left 20px
                     text-decoration none
+                    color #9e9e9e
+                    padding-bottom 4px
+                .nav:hover
+                    color #42b983
+                    border-bottom 3px solid #42b983
+
+
+
+
 
 </style>

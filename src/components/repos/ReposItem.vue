@@ -47,12 +47,12 @@ export default{
             white-space nowrap
             padding-bottom 1px
             text-overflow ellipsis
-            border-bottom 1px solid #9c6 
+            border-bottom 1px solid #42b983 
             overflow hidden
             height 100%
             color #555459
         .name:hover
-            color #9c6
+            color #42b983
         .time
             padding-top 8px
             font-size 15px
