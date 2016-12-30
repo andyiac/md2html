@@ -1,9 +1,10 @@
 <template>
     <div id="repo-wrap">
         <div class="item">
-            <a  class="content" :href="'/#/blog-detail/?id=' + repo.id"  target="_blank"> 
-                <div class="name"> {{ repo.title }} </div>
-            </a>
+            <div class="content"> 
+                <a class="name" :href="'/#/blog-detail/?id=' + repo.id"  target="_blank"> {{ repo.title }} </a>
+                <div class="time"> {{repo.time }}</div>
+            </div>
         </div>
     </div>
 </template>
@@ -24,11 +25,9 @@ export default{
 
 #repo-wrap
     width 100%
-    height 60px 
+    height 74px 
     .item
-        cursor pointer
         position relative
-        padding-left 10px
     .item a:before , .item a:after
         border 8px solid transparent
         border-left 8px solid #fff
@@ -37,27 +36,29 @@ export default{
         position absolute
         top 20px 
         right 20px
-        content ' '
     .item a:before
         border-left-color #9e9ea6
         right 18px
     .item .content
-        .avatar
-            line-height 60px
-            float left
-            width 80px
         .name
+            font-size 17px
             text-align left
             float left
-            line-height 60px
-            width 92% 
             white-space nowrap
+            padding-bottom 1px
             text-overflow ellipsis
+            border-bottom 1px solid #9c6 
             overflow hidden
             height 100%
             color #555459
-            margin-left 10px
-            font-weight 600
+        .name:hover
+            color #9c6
+        .time
+            padding-top 8px
+            font-size 15px
+            clear left
+            color rgba(0,0,0,0.3)
+            font-style italic
         .desc 
             margin-left 10px
             line-height 60px

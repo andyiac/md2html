@@ -57,20 +57,10 @@
         max-width 800px
         margin-top 20px
         .title
-            margin 15px 0
+            margin 30px 0
             font-size 20px
-
     .repo-item
         list-style none 
-        border 1px solid #eee
-        border-top none
-        background-color #fafafa
-    .repo-item:nth-of-type(even) 
-        background-color #fff
-    .repo-item:first-child
-        border-top 1px solid #eee
-    .repo-item:last-child
-        border-bottom 1px solid #eee
     .load-more
         width 160px
         cursor pointer
