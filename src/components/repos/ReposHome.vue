@@ -54,7 +54,7 @@
 <style lang="stylus">
     #home-wrap
         margin 0 auto
-        max-width 978px
+        max-width 800px
         margin-top 20px
         .title
             margin 15px 0

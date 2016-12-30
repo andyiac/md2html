@@ -3,10 +3,14 @@
         <div id="header">
             <div class="content">
                 <div class="logo">
-                    <a href="/">42GATE</a>
+                    <div>42GATE</div>
                 </div>
                 <div class="menu">
                     <!-- <router-link to="/repos"> Repos</router-link>  -->
+                    <router-link to="/about"> Home </router-link> 
+                    <router-link to="/">      TimeLine </router-link> 
+                    <router-link to="/about"> Category </router-link> 
+                    <router-link to="/about"> Contact</router-link> 
                     <router-link to="/about"> About </router-link> 
                 </div>
             </div>
@@ -27,7 +31,7 @@
         background-color #f5f5f5
         border-bottom 1px solid #eee
         .content
-            max-width 978px
+            max-width 800px
             line-height 90px
             margin auto
             .logo

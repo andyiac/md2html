@@ -18,10 +18,13 @@
 <style lang='stylus'>
     #about-wrap
         margin 0 auto
-        width 976px
+        width 800px
         margin-top 20px
         .title
             font-size  20px
+            border-bottom 1px solid #eee
+            padding-bottom 0.3em
+            font-size 2em
         .content
             min-height 400px
             margin-top 10px

@@ -1,6 +1,15 @@
 <template>
     <div class="blog-detail">
-        <div class="content markdown-body" v-html="blogContent"></div>
+        <div class="content">
+            <div class="markdown-body" v-html="blogContent"></div>
+            <div class="content-footer">
+                <br>
+            </div>
+        </div>
+
+        <footer class="footer">
+            
+        </footer>
     </div>
 </template>
 
@@ -38,7 +47,15 @@ export default {
 <style lang="stylus">
     .blog-detail
         .content
-            min-height 400px
+            min-height 600px
             margin 40px auto
             width 800px
+            .content-footer
+                margin-top 40px
+                height 80px
+                border-top 1px solid #eee
+        .footer
+            background #f5f5f5
+            width 100%
+            height 200px
 </style>
