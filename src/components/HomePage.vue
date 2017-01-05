@@ -17,7 +17,9 @@
 import BottomFooter from './BottomFooter.vue'
 
 export default {
-    components:{ BottomFooter }
+    components:{ BottomFooter },
+    mounted: function(){
+    }
 }
 </script>
 
