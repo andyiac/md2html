@@ -6,9 +6,9 @@
                     <div class="name">42GATE</div>
                 </div>
                 <div class="menu">
-                    <router-link class="nav" :class="{'nav-active': menu.home}" to="/home">Home</router-link> 
+                    <router-link class="nav" :class="{'nav-active': menu.home}" to="/blog/homepage">Home</router-link> 
                     <router-link class="nav" :class="{'nav-active': menu.timeline}" to="/timeline">TimeLine</router-link> 
-                    <router-link class="nav" :class="{'nav-active': menu.about}" to="/about">About</router-link> 
+                    <router-link class="nav" :class="{'nav-active': menu.about}" to="/blog/about">About</router-link> 
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@ export default{
             this.menu.home = false 
             this.menu.timeline = false  
             this.menu.about = false  
-            if(path == '/home'){
+            if(path == '/blog/homepage'){
                 this.menu.home = true
             } else if(path == '/timeline'){
                 this.menu.timeline = true

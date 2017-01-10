@@ -1,7 +1,7 @@
 <template>
     <div id="timeline-wrap">
         <div class="content-wrap">
-            <p class="title">blogs </p>
+            <p class="title"> </p>
             <ul>
                 <li class="repo-item" v-for="(blog, index) in blogs">
                     <repos-item :repo="blog" :index="index"></repos-item>

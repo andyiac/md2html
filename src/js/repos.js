@@ -14,6 +14,16 @@ export default {
         },(err)=>{
             //console.log("---getRepos error ---> " + JSON.stringify(err));
         })   
-    }
+    },
+
+    // getBlogDetailByTitle
+    getBlogDetailByTitle: function(ctx, title_name, cb){
+        ctx.$http.get("/api/get_blog_by_title/?title_name=" + title_name ).then((res)=>{
+            if(cb) cb(res.data.data)
+        },(err)=>{
+            console.log("---get blog detail data error ---> " + JSON.stringify(err));
+        })   
+    },
+
 
 }

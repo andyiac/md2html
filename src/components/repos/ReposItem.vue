@@ -2,7 +2,8 @@
     <div id="repo-wrap">
         <div class="item">
             <div class="content"> 
-                <a class="name" :href="'/#/blog-detail/?id=' + repo.id"  target="_blank"> {{ repo.title }} </a>
+                <!-- <a class="name" :href="'/#/blog-detail/?id=' + repo.id"  target="_blank"> {{ repo.title }} </a> -->
+                <router-link class="name" :to="current_url">{{ repo.title }}</router-link>
                 <div class="time"> {{repo.time }}</div>
             </div>
         </div>
@@ -15,7 +16,9 @@ export default{
     data:function(){
         return{
             // http://localhost:9090/api/get_blog/?id=20
-            current_url: "/api/get_blog/?id=" + this.repo.id
+            // current_url: "/api/get_blog/?id=" + this.repo.id
+            current_url: '/blog/' + this.repo.title
+
         }
     }
 }
@@ -47,12 +50,12 @@ export default{
             white-space nowrap
             padding-bottom 1px
             text-overflow ellipsis
-            border-bottom 1px solid #42b983 
             overflow hidden
             height 100%
             color #555459
         .name:hover
             color #42b983
+            border-bottom 1px solid #42b983 
         .time
             padding-top 8px
             font-size 15px

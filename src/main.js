@@ -38,6 +38,10 @@ const router = new Router({
             component: BlogDetail
         },
         {
+            path: '/blog/:title_name',
+            component: BlogDetail
+        },
+        {
             path: '/about',
             component: About
         }

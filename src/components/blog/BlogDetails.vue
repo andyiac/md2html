@@ -29,16 +29,26 @@ export default {
             BlogAction.getBlogDetail(this, this.blogId, (blog)=>{
                 this.blogContent = blog.content
                 document.title = blog.title
-                console.log(JSON.stringify(blog));
+                // console.log(JSON.stringify(blog));
             })
-        }
+        },
+        
+        getBlogContentByTitle: function(){
+            BlogAction.getBlogDetailByTitle(this, this.title_name, (blog)=>{
+                this.blogContent = blog.content
+                document.title = blog.title
+                // console.log(JSON.stringify(blog));
+            })
+        },
+
     },
     mounted () {
         var self = this
         setTimeout(function () {
         }, 1)
-        self.blogId= self.$route.query.id
-        this.getBlogContent()
+        //self.blogId= self.$route.query.id
+        self.title_name = self.$route.params.title_name
+        this.getBlogContentByTitle()
     }
 
 }
