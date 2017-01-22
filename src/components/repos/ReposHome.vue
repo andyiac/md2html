@@ -4,7 +4,7 @@
             <p class="title"> </p>
             <ul>
                 <li class="repo-item" v-for="(blog, index) in blogs">
-                    <repos-item :repo="blog" :index="index"></repos-item>
+                    <blog-item :repo="blog" :index="index"></blog-item>
                 </li>
             </ul>
         </div>
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-    import ReposItem from './ReposItem.vue'
+    import BlogItem from './BlogItem.vue'
     import BottomFooter from '../BottomFooter.vue'
     import ReposAction from '../../js/repos.js'
 
     export default{
         components: {
-            ReposItem ,BottomFooter
+            BlogItem ,BottomFooter
         },
         methods:{
             loadNextPage: function(){
