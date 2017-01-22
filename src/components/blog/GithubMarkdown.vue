@@ -450,8 +450,8 @@
 
 .markdown-body h1 {
   padding-bottom: 0.3em;
-  font-size: 2em;
-  border-bottom: 1px solid #eee;
+  font-size: 1.6em;
+  /*border-bottom: 1px solid #eee;*/
 }
 
 .markdown-body h2 {
