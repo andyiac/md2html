@@ -24,7 +24,7 @@ export default{
 
 #repo-wrap
     width 100%
-    border-bottom 1px solid #ccc
+    border-bottom 1px solid #f7f7f7
     .item
         position relative
     .item a:before , .item a:after
@@ -48,10 +48,10 @@ export default{
             text-overflow ellipsis
             overflow hidden
             height 100%
+            width 70%
             color #555459
         .name:hover
             color #42b983
-            border-bottom 1px solid #42b983 
         .time
             height 100%
             font-size 14px
