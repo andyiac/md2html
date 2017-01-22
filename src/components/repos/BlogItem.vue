@@ -19,24 +19,20 @@ export default{
 <style lang="stylus">
 
 #repo-wrap
+    clear left
     width 100%
     border-bottom 1px solid #e6e6e6
-    clear both 
     .name
         padding 30px 0
         font-size 17px
         text-align left
         float left
-        text-overflow ellipsis
-        overflow hidden
-        height 100%
         width 70%
         color #555459
     .name:hover
         color #42b983
     .time
         padding 30px 0
-        height 100%
         font-size 14px
         width 30%
         text-align right
