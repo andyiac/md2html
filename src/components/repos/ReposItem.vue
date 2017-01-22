@@ -2,9 +2,8 @@
     <div id="repo-wrap">
         <div class="item">
             <div class="content"> 
-                <!-- <a class="name" :href="'/#/blog-detail/?id=' + repo.id"  target="_blank"> {{ repo.title }} </a> -->
-                <router-link class="name" :to="current_url">{{ repo.title }}</router-link>
                 <div class="time"> {{repo.time }}</div>
+                <router-link class="name" :to="current_url">{{ repo.title }}</router-link>
             </div>
         </div>
     </div>
@@ -15,10 +14,7 @@ export default{
     props:['repo'],
     data:function(){
         return{
-            // http://localhost:9090/api/get_blog/?id=20
-            // current_url: "/api/get_blog/?id=" + this.repo.id
             current_url: '/blog/' + this.repo.title
-
         }
     }
 }
@@ -28,7 +24,7 @@ export default{
 
 #repo-wrap
     width 100%
-    height 74px 
+    margin-bottom 1px
     .item
         position relative
     .item a:before , .item a:after
@@ -43,6 +39,7 @@ export default{
         border-left-color #9e9ea6
         right 18px
     .item .content
+        padding 30px 0
         .name
             font-size 17px
             text-align left
@@ -57,9 +54,10 @@ export default{
             color #42b983
             border-bottom 1px solid #42b983 
         .time
-            padding-top 8px
+            height 100%
             font-size 15px
             clear left
+            float left
             color rgba(0,0,0,0.3)
             font-style italic
         .desc 

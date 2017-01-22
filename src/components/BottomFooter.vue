@@ -10,6 +10,7 @@
 <style lang="stylus">
 #footer-wrap
     .footer
+        display none
         background #f5f5f5
         width 100%
         height 200px
