@@ -44,9 +44,6 @@ export default {
     },
     mounted () {
         var self = this
-        setTimeout(function () {
-        }, 1)
-        //self.blogId= self.$route.query.id
         self.title_name = self.$route.params.title_name
         this.getBlogContentByTitle()
     }

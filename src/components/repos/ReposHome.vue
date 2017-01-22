@@ -2,11 +2,8 @@
     <div id="timeline-wrap">
         <div class="content-wrap">
             <p class="title"> </p>
-            <ul>
-                <li class="repo-item" v-for="(blog, index) in blogs">
-                    <blog-item :repo="blog" :index="index"></blog-item>
-                </li>
-            </ul>
+            <blog-item class="repo-item" v-for="(blog, index) in blogs" :repo="blog" :index="index"> 
+            </blog-item>
         </div>
         <bottom-footer></bottom-footer>
     </div>
@@ -58,12 +55,8 @@
         .content-wrap
             margin 0 auto
             max-width 600px
-            padding 0 10px
-            margin-top 20px
             margin-bottom 60px
             .title
                 margin 30px 0
                 font-size 20px
-    .repo-item
-        list-style none 
 </style>
