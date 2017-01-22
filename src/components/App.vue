@@ -39,18 +39,17 @@ export default{
     * 
         font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
     #header
-        height 90px
+        height 120px
         .content
-            max-width 620px
-            line-height 90px
-            padding 0 10px
+            max-width 600px
+            line-height 120px
             margin auto
             .logo
                 letter-spacing 3px
                 .name
                     margin 0 auto
                     text-align center
-                    font-size 15px
+                    font-size 18px
                     color #444
                 a
                     text-decoration none    
