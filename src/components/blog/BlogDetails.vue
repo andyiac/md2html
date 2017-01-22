@@ -59,7 +59,7 @@ export default {
         .content
             min-height 600px
             margin 40px auto
-            max-width 820px
+            max-width 600px
             padding 0 10px
             .content-footer
                 margin-top 40px

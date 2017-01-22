@@ -20,7 +20,6 @@ export default{
 
 #repo-wrap
     clear left
-    width 100%
     border-bottom 1px solid #e6e6e6
     .name
         padding 30px 0

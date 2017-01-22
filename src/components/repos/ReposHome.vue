@@ -57,7 +57,7 @@
     #timeline-wrap
         .content-wrap
             margin 0 auto
-            max-width 620px
+            max-width 600px
             padding 0 10px
             margin-top 20px
             margin-bottom 60px
