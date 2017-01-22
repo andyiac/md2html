@@ -2,8 +2,8 @@
     <div id="repo-wrap">
         <div class="item">
             <div class="content"> 
-                <div class="time"> {{repo.time }}</div>
                 <router-link class="name" :to="current_url">{{ repo.title }}</router-link>
+                <div class="time"> {{repo.time }}</div>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@ export default{
 
 #repo-wrap
     width 100%
-    margin-bottom 1px
+    border-bottom 1px solid #ccc
     .item
         position relative
     .item a:before , .item a:after
@@ -44,7 +44,6 @@ export default{
             font-size 17px
             text-align left
             float left
-            white-space nowrap
             padding-bottom 1px
             text-overflow ellipsis
             overflow hidden
@@ -55,19 +54,10 @@ export default{
             border-bottom 1px solid #42b983 
         .time
             height 100%
-            font-size 15px
-            clear left
-            float left
+            font-size 14px
+            float right 
             color rgba(0,0,0,0.3)
             font-style italic
-        .desc 
-            margin-left 10px
-            line-height 60px
-            width 600px
-            float left 
-            white-space nowrap
-            text-overflow ellipsis
-            overflow hidden
     a 
         text-decoration none
         display block
