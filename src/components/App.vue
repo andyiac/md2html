@@ -3,7 +3,7 @@
         <div id="header">
             <div class="content">
                 <div class="logo">
-                    <div class="name">42GATE</div>
+                    <a href="/" class="name">42GATE</a>
                 </div>
             </div>
         </div>
@@ -47,6 +47,7 @@ export default{
             .logo
                 letter-spacing 3px
                 .name
+                    display block
                     margin 0 auto
                     text-align center
                     font-size 18px
