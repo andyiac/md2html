@@ -60,7 +60,6 @@ export default{
     watch:{
         markdownSource: 'md2html',
         cssSource: 'md2html'
-
     }
 }
     
