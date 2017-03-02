@@ -14,6 +14,8 @@
   font-size: 15px;
   line-height: 2;
   word-wrap: break-word;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .markdown-body .pl-c {

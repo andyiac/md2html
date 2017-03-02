@@ -3,7 +3,7 @@
         <div id="header">
             <div class="content">
                 <div class="logo">
-                    <a href="/" class="name">42GATE</a>
+                    <a href="/" class="name">xxx</a>
                 </div>
             </div>
         </div>

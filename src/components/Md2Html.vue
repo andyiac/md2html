@@ -1,9 +1,14 @@
 <template>
     <div id="md-2-html">
-        
-        <textarea cols="80" rows="10" v-model="markdownSource"></textarea>
-        
-        <div v-html="htmlSource"></div>
+        <div class="left-area">
+            <textarea cols="70" rows="10" v-model="cssSource" placeholder="css source"></textarea>
+            <textarea cols="70" rows="10" v-model="markdownSource" placeholder="html source"></textarea>
+            
+        </div>
+        <div class="right-area">
+            <div class="markdown markdown-body github" v-bind:style="cssSource" v-html="htmlSource"></div>
+        </div>
+        <iframe frameborder="0"> </iframe>
     </div>
 </template>
 
@@ -24,13 +29,19 @@ marked.setOptions({
 export default{
     data(){
         return {
+            cssSource:'',
             markdownSource: '',
             htmlSource:''
         }
     },
     methods:{
         md2html(){
+
             this.htmlSource = marked(this.markdownSource)
+            if(this.cssSource){
+                var style = '<style>' + this.cssSource +'</style>'
+                this.htmlSource += style
+            }
         }
     },
     watch:{
@@ -40,6 +51,11 @@ export default{
     
 </script>
 
-<style>
-    
+<style lang="stylus">
+.left-area{
+    background: #ccc; 
+}
+.right-area{
+    padding: 20px;
+}
 </style>
