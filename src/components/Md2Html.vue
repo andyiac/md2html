@@ -3,10 +3,10 @@
         <div class="left-area">
             <textarea cols="70" rows="10" v-model="cssSource" placeholder="css source"></textarea>
             <textarea cols="70" rows="10" v-model="markdownSource" placeholder="html source"></textarea>
-            
+            <button @click="download()">Download</button>
         </div>
         <div class="right-area">
-            <div class="markdown markdown-body github" v-bind:style="cssSource" v-html="htmlSource"></div>
+            <div id="download-content" class="markdown markdown-body github" v-bind:style="cssSource" v-html="htmlSource"></div>
         </div>
         <iframe frameborder="0"> </iframe>
     </div>
@@ -42,6 +42,15 @@ export default{
                 var style = '<style>' + this.cssSource +'</style>'
                 this.htmlSource += style
             }
+        },
+        download(){
+            var a = document.body.appendChild(
+                document.createElement("a")
+            );
+            a.download = "export.html";
+            // a.href = "data:text/html," + document.getElementById("download-content").innerHTML; // Grab the HTML
+            a.href = "data:text/html," + document.getElementById("download-content").src; // Grab the HTML
+            a.click(); // Trigger a click on the element
         }
     },
     watch:{
