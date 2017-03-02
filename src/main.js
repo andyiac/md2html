@@ -9,6 +9,8 @@ import About from './components/About.vue'
 import BlogDetail from './components/blog/BlogDetails.vue'
 import HomePage from './components/HomePage.vue'
 
+import Md2Html from './components/Md2Html.vue'
+
 Vue.use(Router)
 Vue.use(VueResource)
 
@@ -19,7 +21,10 @@ const router = new Router({
     routes: [
         {
             path: '/',
-            component: ReposHome
+            component: Md2Html
+        },{
+            path: '/md2html',
+            component: Md2Html
         },
         {
             path: '/home',
