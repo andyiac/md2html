@@ -1,7 +1,7 @@
 {
-  "name": "githot-vue",
+  "name": "mdToHtml",
   "version": "0.1.0",
-  "description": "githot web app",
+  "description": "md to html",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --no-info --port 9090",

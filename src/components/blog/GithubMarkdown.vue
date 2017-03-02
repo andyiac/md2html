@@ -11,7 +11,7 @@
   -webkit-text-size-adjust: 100%;
   color: rgb(60, 60, 60);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
+  font-size: 15px;
   line-height: 2;
   word-wrap: break-word;
 }
