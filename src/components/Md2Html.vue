@@ -75,11 +75,12 @@ export default{
     
 </script>
 
-<style lang="stylus">
+<style lang="sass">
 .edit-area{
+    margin: 0;
     float: left;
     min-height: 800px;
-    width: 37%;
+    width: 40%;
     background: #ccc; 
     .md-tab{
         background: #ggg;
@@ -93,10 +94,10 @@ export default{
     
 }
 .preview-area{
+    margin: 0;
     float: left;
     width: 60%;
     min-height: 800px;
     background: #eee;
-    padding: 20px;
 }
 </style>
