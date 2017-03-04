@@ -5,6 +5,7 @@
             <textarea cols="70" rows="10" v-model="markdownSource" placeholder="html source"></textarea>
             <button @click="download()">Download</button>
         </div>
+        
         <div class="right-area">
             <div id="download-content" >
                 <div class="markdown markdown-body github" v-html="htmlSource"></div>
