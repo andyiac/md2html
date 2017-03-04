@@ -1,12 +1,21 @@
 <template>
     <div id="md-2-html">
-        <div class="left-area">
-            <textarea cols="70" rows="10" v-model="cssSource" placeholder="css source"></textarea>
-            <textarea cols="70" rows="10" v-model="markdownSource" placeholder="html source"></textarea>
+        <div class="edit-area">
+
+            <div class="md-tab">
+                <textarea v-model="markdownSource" placeholder="html source"></textarea>
+            </div>
+
+            <div class="css-tab">
+                <textarea v-model="cssSource" placeholder="css source"></textarea>
+            </div>
+            <div class="config-tab">
+                
+            </div>
             <button @click="download()">Download</button>
         </div>
-        
-        <div class="right-area">
+
+        <div class="preview-area">
             <div id="download-content" >
                 <div class="markdown markdown-body github" v-html="htmlSource"></div>
             </div>
@@ -67,10 +76,27 @@ export default{
 </script>
 
 <style lang="stylus">
-.left-area{
+.edit-area{
+    float: left;
+    min-height: 800px;
+    width: 37%;
     background: #ccc; 
+    .md-tab{
+        background: #ggg;
+    }
+    .css-tab{
+
+    }
+    .config-tab{
+
+    }
+    
 }
-.right-area{
+.preview-area{
+    float: left;
+    width: 60%;
+    min-height: 800px;
+    background: #eee;
     padding: 20px;
 }
 </style>
