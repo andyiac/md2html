@@ -9,7 +9,6 @@
                     <button @click="whichTab = 'md-tab'">markdown</button>
                     <button @click="whichTab = 'css-tab'">css</button>
                     <button @click="whichTab = 'config-tab'">config</button>
-                    <button @click="testSave()">test</button>
                 </div>
 
                 <div class="md-tab tab" :class="{'active': whichTab == 'md-tab'}">
@@ -65,7 +64,7 @@ export default{
             this.htmlSource = marked(this.markdownSource)
             
             this.counter += 1
-            console.log("=========>>" + this.counter);
+            console.log("=== marked ======>>" + this.counter);
 
             if(this.cssSource){
                 var style = '<style>' + this.cssSource +'</style>'
@@ -92,14 +91,9 @@ export default{
             });
             return editor
         },
-        testSave(){
+        saveContent(){
             this.editor.save()
-            this.counter += 1
-            console.log("=========>>" + this.counter);
-            // console.log("===== markdown source =>>> " + this.markdownSource);
-            // console.log("===== markdown save =>>> "+ this.editor.getValue());
             this.markdownSource = this.editor.getValue();
-            // this.md2html()
         }
     },
     watch:{
@@ -110,7 +104,7 @@ export default{
        this.editor =  this.initCodeMirror()
        self = this
        this.editor.on("changes", function(){
-            self.testSave()
+            self.saveContent()
        })
     }
 }
