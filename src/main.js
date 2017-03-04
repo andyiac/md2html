@@ -16,37 +16,13 @@ Vue.use(VueResource)
 
 
 const router = new Router({
-    // mode: 'history',
+    mode: 'history',
     base: __dirname,
     routes: [
         {
             path: '/',
             component: Md2Html
         },{
-            path: '/md2html',
-            component: Md2Html
-        },
-        {
-            path: '/home',
-            component: HomePage
-        },
-        {
-            path: '/timeline',
-            component: ReposHome
-        },
-        {
-            path: '/repos',
-            component: ReposHome
-        },
-        {
-            path: '/blog-detail',
-            component: BlogDetail
-        },
-        {
-            path: '/blog/:title_name',
-            component: BlogDetail
-        },
-        {
             path: '/about',
             component: About
         }
