@@ -9,10 +9,11 @@
                     <button @click="whichTab = 'md-tab'">markdown</button>
                     <button @click="whichTab = 'css-tab'">css</button>
                     <button @click="whichTab = 'config-tab'">config</button>
+                    <button @click="testSave()">test</button>
                 </div>
 
                 <div class="md-tab tab" :class="{'active': whichTab == 'md-tab'}">
-                    <textarea v-model="markdownSource" placeholder="markdown source"></textarea>
+                    <textarea id="code" name="code" v-model="markdownSource" placeholder="markdown source"></textarea>
                 </div>
                 <div class="css-tab tab" :class="{'active': whichTab == 'css-tab'}">
                     <textarea v-model="cssSource" placeholder="css source"></textarea>
@@ -44,20 +45,28 @@ marked.setOptions({
     smartLists: true,
     smartypants: false
 });
+import CodeMirror from '../codemirror/lib/codemirror.js'
+import markdown from '../codemirror/mode/markdown/markdown.js'
 
 export default{
     data(){
         return {
             whichTab: 'md-tab',
             cssSource:'',
-            markdownSource: '',
-            htmlSource:''
+            markdownSource:'',
+            htmlSource:'',
+            editor: {},
+            counter: 0
         }
     },
     methods:{
         md2html(){
 
             this.htmlSource = marked(this.markdownSource)
+            
+            this.counter += 1
+            console.log("=========>>" + this.counter);
+
             if(this.cssSource){
                 var style = '<style>' + this.cssSource +'</style>'
                 this.htmlSource = style + this.htmlSource
@@ -73,17 +82,43 @@ export default{
             a.href = "data:text/html;charset=utf-8," + encodeURIComponent(elHtml);
             // Trigger a click on the element
             a.click();
+        },
+        initCodeMirror(){
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                mode: 'markdown',
+                lineNumbers: true,
+                theme: "default",
+                extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"}
+            });
+            return editor
+        },
+        testSave(){
+            this.editor.save()
+            this.counter += 1
+            console.log("=========>>" + this.counter);
+            // console.log("===== markdown source =>>> " + this.markdownSource);
+            // console.log("===== markdown save =>>> "+ this.editor.getValue());
+            this.markdownSource = this.editor.getValue();
+            // this.md2html()
         }
     },
     watch:{
         markdownSource: 'md2html',
         cssSource: 'md2html'
+    },
+    mounted(){
+       this.editor =  this.initCodeMirror()
+       self = this
+       this.editor.on("changes", function(){
+            self.testSave()
+       })
     }
 }
     
 </script>
 
 <style lang="sass">
+@import url("../codemirror/lib/codemirror.css");
 .edit-area{
     margin: 0;
     float: left;
@@ -123,4 +158,8 @@ export default{
 button{
     padding: 4px;
 }
+.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
+.cm-s-default .cm-trailing-space-a:before,
+.cm-s-default .cm-trailing-space-b:before {position: absolute; content: "\00B7"; color: #777;}
+.cm-s-default .cm-trailing-space-new-line:before {position: absolute; content: "\21B5"; color: #777;}
 </style>
