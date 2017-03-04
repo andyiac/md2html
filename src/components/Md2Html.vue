@@ -15,7 +15,7 @@
                     <textarea id="code" name="code" v-model="markdownSource" placeholder="markdown source"></textarea>
                 </div>
                 <div class="css-tab tab" :class="{'active': whichTab == 'css-tab'}">
-                    <textarea v-model="cssSource" placeholder="css source"></textarea>
+                    <textarea id="css-code" name="css-code" v-model="cssSource" placeholder="css source"></textarea>
                 </div>
                 <div class="config-tab tab" :class="{'active': whichTab == 'config-tab'}"></div>
                 <button @click="download()">Download</button>
@@ -27,7 +27,6 @@
                 <div class="markdown markdown-body github" v-html="htmlSource"></div>
             </div>
         </div>
-        <iframe frameborder="0"> </iframe>
     </div>
 </template>
 
@@ -46,6 +45,7 @@ marked.setOptions({
 });
 import CodeMirror from '../codemirror/lib/codemirror.js'
 import markdown from '../codemirror/mode/markdown/markdown.js'
+import cssjs from '../codemirror/mode/css/css.js'
 
 export default{
     data(){
@@ -55,6 +55,7 @@ export default{
             markdownSource:'',
             htmlSource:'',
             editor: {},
+            cssEditor:{},
             counter: 0
         }
     },
@@ -91,9 +92,20 @@ export default{
             });
             return editor
         },
+        initCssCodeMirror(){
+            var editor = CodeMirror.fromTextArea(document.getElementById("css-code"), {
+                lineNumbers: true,
+                extraKeys: {"Ctrl-Space": "autocomplete"}
+            });
+            return editor
+        },
         saveContent(){
             this.editor.save()
-            this.markdownSource = this.editor.getValue();
+            this.markdownSource = this.editor.getValue()
+        },
+        saveCssContent(){
+            this.cssEditor.save()
+            this.cssSource = this.cssEditor.getValue()
         }
     },
     watch:{
@@ -102,9 +114,14 @@ export default{
     },
     mounted(){
        this.editor =  this.initCodeMirror()
+       this.cssEditor = this.initCssCodeMirror()
+       
        self = this
        this.editor.on("changes", function(){
             self.saveContent()
+       })
+       this.cssEditor.on("changes", function(){
+            self.saveCssContent()
        })
     }
 }
@@ -159,4 +176,5 @@ button{
 .cm-s-default .cm-trailing-space-a:before,
 .cm-s-default .cm-trailing-space-b:before {position: absolute; content: "\00B7"; color: #777;}
 .cm-s-default .cm-trailing-space-new-line:before {position: absolute; content: "\21B5"; color: #777;}
+.CodeMirror {background: #f8f8f8;}
 </style>
