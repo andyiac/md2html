@@ -5,13 +5,15 @@
                 title
             </div>
             <div class="content">
-                <button @click="whichTab = 'md-tab'">markdown</button>
-                <button @click="whichTab = 'css-tab'">css</button>
-                <button @click="whichTab = 'config-tab'">style</button>
-                <div class="md-tab tab" :class="{'active': whichTab == 'md-tab'}">
-                    <textarea v-model="markdownSource" placeholder="html source"></textarea>
+                <div class="tab-title">
+                    <button @click="whichTab = 'md-tab'">markdown</button>
+                    <button @click="whichTab = 'css-tab'">css</button>
+                    <button @click="whichTab = 'config-tab'">config</button>
                 </div>
 
+                <div class="md-tab tab" :class="{'active': whichTab == 'md-tab'}">
+                    <textarea v-model="markdownSource" placeholder="markdown source"></textarea>
+                </div>
                 <div class="css-tab tab" :class="{'active': whichTab == 'css-tab'}">
                     <textarea v-model="cssSource" placeholder="css source"></textarea>
                 </div>
@@ -93,6 +95,10 @@ export default{
     }
     .content{
         padding: 20px;
+        .tab-title{
+            padding-bottom: 10px;
+
+        }
     }
     .md-tab{
         display: none;
@@ -113,5 +119,8 @@ export default{
     width: 60%;
     min-height: 800px;
     background: #eee;
+}
+button{
+    padding: 4px;
 }
 </style>
