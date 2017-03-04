@@ -4,10 +4,7 @@ import VueResource from 'vue-resource'
 import Axios from 'axios'
 
 import App from './components/App.vue'
-import ReposHome from './components/repos/ReposHome.vue'
 import About from './components/About.vue'
-import BlogDetail from './components/blog/BlogDetails.vue'
-import HomePage from './components/HomePage.vue'
 
 import Md2Html from './components/Md2Html.vue'
 
