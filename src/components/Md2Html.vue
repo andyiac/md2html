@@ -24,7 +24,7 @@
         </div>
 
         <div class="preview-area">
-            <div id="download-content" >
+            <div id="download-content" class="content" >
                 <div class="markdown markdown-body github" v-html="htmlSource"></div>
             </div>
         </div>
@@ -151,9 +151,12 @@ export default{
 .preview-area{
     margin: 0;
     float: left;
-    width: 60%;
+    width: 59%;
     min-height: 800px;
-    background: #eee;
+    border-left: 1px solid #eee;
+    .content{
+        margin: 0 auto;
+    }
 }
 button{
     padding: 4px;
