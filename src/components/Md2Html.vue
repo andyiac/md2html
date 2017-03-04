@@ -1,18 +1,23 @@
 <template>
     <div id="md-2-html">
         <div class="edit-area">
+            <div class="title">
+                title
+            </div>
+            <div class="content">
+                <button @click="whichTab = 'md-tab'">markdown</button>
+                <button @click="whichTab = 'css-tab'">css</button>
+                <button @click="whichTab = 'config-tab'">style</button>
+                <div class="md-tab tab" :class="{'active': whichTab == 'md-tab'}">
+                    <textarea v-model="markdownSource" placeholder="html source"></textarea>
+                </div>
 
-            <div class="md-tab">
-                <textarea v-model="markdownSource" placeholder="html source"></textarea>
+                <div class="css-tab tab" :class="{'active': whichTab == 'css-tab'}">
+                    <textarea v-model="cssSource" placeholder="css source"></textarea>
+                </div>
+                <div class="config-tab tab" :class="{'active': whichTab == 'config-tab'}"></div>
+                <button @click="download()">Download</button>
             </div>
-
-            <div class="css-tab">
-                <textarea v-model="cssSource" placeholder="css source"></textarea>
-            </div>
-            <div class="config-tab">
-                
-            </div>
-            <button @click="download()">Download</button>
         </div>
 
         <div class="preview-area">
@@ -41,6 +46,7 @@ marked.setOptions({
 export default{
     data(){
         return {
+            whichTab: 'md-tab',
             cssSource:'',
             markdownSource: '',
             htmlSource:''
@@ -82,16 +88,24 @@ export default{
     min-height: 800px;
     width: 40%;
     background: #ccc; 
+    .title{
+        padding: 20px 20px 0px;
+    }
+    .content{
+        padding: 20px;
+    }
     .md-tab{
-        background: #ggg;
+        display: none;
     }
     .css-tab{
-
+        display: none;
     }
     .config-tab{
-
+        display: none;
     }
-    
+    .active{
+        display: block;
+    }
 }
 .preview-area{
     margin: 0;
