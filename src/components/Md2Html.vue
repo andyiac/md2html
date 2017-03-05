@@ -27,7 +27,7 @@
                 </div>
                 <div class="about-tab tab" :class="{'active': whichTab == 'about-tab'}">
                     <p>
-                        md2html is a simple tool to convert your markdown file to pure html with some basic css style, you can use this simple tool with GitHub pages , you will find it very easy to build a static web site , Also we have prepared some basic css for you, ofcourse if you know some css you can edit the style you like.
+                        md2html is a simple tool to convert your markdown file to pure html with some basic css style, you can use this simple tool with GitHub pages , you will find it very easy to build a static web site , Also we have prepared some basic css for you, of course if you know some css you can edit the style as you like.
                     </p> 
                         Jekyll is too heavy for me, and jekyll is base on Ruby , Ruby is not family to me , Also in some country for some reason like GFW you should have a vpn to access the RubyGems. 
                         
