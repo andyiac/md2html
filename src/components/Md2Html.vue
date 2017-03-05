@@ -23,7 +23,7 @@
                     <textarea id="css-code" name="css-code" v-model="cssSource" placeholder="css source"></textarea>
                 </div>
                 <div class="config-tab tab" :class="{'active': whichTab == 'config-tab'}">
-                    <input style="width:100px; height: 24px; outline: none" type="text" v-model="docTitle" placeholder="document title">
+                    <input style="width:200px; height: 24px; outline: none" type="text" v-model="docTitle" placeholder="document title">
                 </div>
                 <div class="about-tab tab" :class="{'active': whichTab == 'about-tab'}">
                     <p>
