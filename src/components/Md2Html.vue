@@ -17,7 +17,9 @@
                 <div class="css-tab tab" :class="{'active': whichTab == 'css-tab'}">
                     <textarea id="css-code" name="css-code" v-model="cssSource" placeholder="css source"></textarea>
                 </div>
-                <div class="config-tab tab" :class="{'active': whichTab == 'config-tab'}"></div>
+                <div class="config-tab tab" :class="{'active': whichTab == 'config-tab'}">
+                    <input type="text" v-model="docTitle" placeholder="document title">
+                </div>
                 <button @click="download()">Download</button>
             </div>
         </div>
@@ -46,17 +48,19 @@ marked.setOptions({
 import CodeMirror from '../codemirror/lib/codemirror.js'
 import markdown from '../codemirror/mode/markdown/markdown.js'
 import cssjs from '../codemirror/mode/css/css.js'
+var gfmStyle = require('css-to-string-loader!css-loader!./doc-style/gfm.css');
 
 export default{
     data(){
         return {
+            docTitle:'',
             whichTab: 'md-tab',
             cssSource:'',
             markdownSource:'',
             htmlSource:'',
             editor: {},
             cssEditor:{},
-            counter: 0
+            counter: 0,
         }
     },
     methods:{
@@ -74,10 +78,16 @@ export default{
         },
         download(){
             var elHtml = document.getElementById("download-content").innerHTML;
+            var header = "<!doctype html>  <meta charset='utf-8'/> "
+            var title = ''; 
+            if(this.docTitle){
+                title = "<title>" + this.docTitle + "</title>"
+            }
+            elHtml = header + title + elHtml
             var a = document.body.appendChild(
                 document.createElement("a")
             );
-            a.download = "export.html";
+            a.download = this.docTitle + ".html";
             // Grab the HTML
             a.href = "data:text/html;charset=utf-8," + encodeURIComponent(elHtml);
             // Trigger a click on the element
@@ -86,7 +96,9 @@ export default{
         initCodeMirror(){
             var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                 mode: 'markdown',
+                addModeClass: true,
                 lineNumbers: true,
+                autofocus: true,
                 theme: "default",
                 extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"}
             });
@@ -94,9 +106,14 @@ export default{
         },
         initCssCodeMirror(){
             var editor = CodeMirror.fromTextArea(document.getElementById("css-code"), {
+                mode: 'css',
+                addModeClass: true,
+                autofocus: true,
                 lineNumbers: true,
+                fixedGutter: true,
                 extraKeys: {"Ctrl-Space": "autocomplete"}
             });
+            editor.setGutterMarker("m2h-css-mode")
             return editor
         },
         saveContent(){
@@ -123,6 +140,10 @@ export default{
        this.cssEditor.on("changes", function(){
             self.saveCssContent()
        })
+
+       this.cssSource = gfmStyle
+       this.cssEditor.setValue(this.cssSource)
+       console.log("gfmStyle======>>>" + gfmStyle);
     }
 }
     
@@ -133,9 +154,7 @@ export default{
 .edit-area{
     margin: 0;
     float: left;
-    min-height: 800px;
     width: 40%;
-    background: #ccc; 
     .title{
         padding: 20px 20px 0px;
     }
@@ -172,9 +191,11 @@ export default{
 button{
     padding: 4px;
 }
-.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
-.cm-s-default .cm-trailing-space-a:before,
-.cm-s-default .cm-trailing-space-b:before {position: absolute; content: "\00B7"; color: #777;}
-.cm-s-default .cm-trailing-space-new-line:before {position: absolute; content: "\21B5"; color: #777;}
-.CodeMirror {background: #f8f8f8;}
+
+
+.CodeMirror {
+    background: #f8f8f8; 
+    border: 1px solid #eee;
+    height: auto;
+}
 </style>

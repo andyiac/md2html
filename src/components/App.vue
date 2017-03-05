@@ -28,11 +28,7 @@ export default{
 </script>
 
 <style lang="stylus">
-    *
-        margin 0
-        padding 0
-    * 
-        font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+
     #header
         .content
             max-width 600px
