@@ -2,14 +2,17 @@
     <div id="md-2-html">
         <div class="edit-area">
             <div class="title">
-               md2html - Just convert you markdown to HTML with basic style. 
+               <h2>md2html</h2> 
+               <p>
+               Just convert you markdown to HTML with basic style. 
+               </p>
             </div>
             <div class="content">
                 <div class="tab-title">
-                    <button @click="whichTab = 'md-tab'">markdown</button>
-                    <button @click="whichTab = 'css-tab'">css</button>
-                    <button @click="whichTab = 'config-tab'">config</button>
-                    <button @click="whichTab = 'about-tab'">about</button>
+                    <button :class="{'active-btn': whichTab == 'md-tab'}" @click="whichTab = 'md-tab'">markdown</button>
+                    <button :class="{'active-btn': whichTab == 'css-tab'}" @click="whichTab = 'css-tab'">css</button>
+                    <button :class="{'active-btn': whichTab == 'config-tab'}" @click="whichTab = 'config-tab'">config</button>
+                    <button :class="{'active-btn': whichTab == 'about-tab'}" @click="whichTab = 'about-tab'">about</button>
                     <button @click="download()">download</button>
                 </div>
 
@@ -201,8 +204,15 @@ export default{
 }
 button{
     padding: 4px;
+    background: #fff;
+    border: 1px solid #aaa;
+    outline: none;
 }
-
+.active-btn{
+    border: 1px solid #42b983;
+    background: #42b983;
+    color: #fff;
+}
 
 .CodeMirror {
     background: #f8f8f8; 
