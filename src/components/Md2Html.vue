@@ -87,8 +87,8 @@ export default{
 
             this.htmlSource = marked(this.markdownSource)
             
-            this.counter += 1
-            console.log("=== marked ======>>" + this.counter);
+            // this.counter += 1
+            // console.log("=== marked ======>>" + this.counter);
 
             if(this.cssSource){
                 var style = '<style>' + this.cssSource +'</style>'
@@ -162,7 +162,7 @@ export default{
 
        this.cssSource = gfmStyle
        this.cssEditor.setValue(this.cssSource)
-       console.log("gfmStyle======>>>" + gfmStyle);
+       // console.log("gfmStyle======>>>" + gfmStyle);
     }
 }
     
