@@ -9,6 +9,8 @@
                     <button @click="whichTab = 'md-tab'">markdown</button>
                     <button @click="whichTab = 'css-tab'">css</button>
                     <button @click="whichTab = 'config-tab'">config</button>
+                    <button @click="whichTag = 'about-tab'">about</button>
+                    <button @click="download()">download</button>
                 </div>
 
                 <div class="md-tab tab" :class="{'active': whichTab == 'md-tab'}">
@@ -20,7 +22,22 @@
                 <div class="config-tab tab" :class="{'active': whichTab == 'config-tab'}">
                     <input type="text" v-model="docTitle" placeholder="document title">
                 </div>
-                <button @click="download()">Download</button>
+                <div class="about-tab tab" :class="{'active': whichTab == 'about-tab'}">
+                    <p>
+                        md2html is a simple tool to convert your markdown file to pure html with some basic css style, you can use this simple tool with GitHub pages , you will find it very easy to build a static web site , Also we have prepared some basic css for you, ofcourse if you know some css you can edit the style you like.
+                    </p> 
+                        Jekyll is too heavy for me, and jekyll is base on Ruby , Ruby is not family to me , Also in some country for some reason like GFW you should have a vpn to access the RubyGems. 
+                        
+                        When you have more markdown file you will find Jekyll is slow , Becouse Jekyll rerender the whole markdown file everytime you build.
+                    <p>
+                        A simple md2html tool is enough for me . 
+                    </p>
+
+                    <p> enjoy! </p>
+
+                    <p> by <a href="http://www.andyiac.com" target="_blank"> andyiac</a> </p>
+
+                </div>
             </div>
         </div>
 
@@ -161,8 +178,9 @@ export default{
     .content{
         padding: 20px;
         .tab-title{
-            padding-bottom: 10px;
-
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
         }
     }
     .md-tab{
