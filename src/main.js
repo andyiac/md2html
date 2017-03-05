@@ -4,13 +4,10 @@ import VueResource from 'vue-resource'
 import Axios from 'axios'
 
 import App from './components/App.vue'
-import About from './components/About.vue'
-
 import Md2Html from './components/Md2Html.vue'
 
 Vue.use(Router)
 Vue.use(VueResource)
-
 
 const router = new Router({
     mode: 'history',
