@@ -2,14 +2,14 @@
     <div id="md-2-html">
         <div class="edit-area">
             <div class="title">
-                title
+               md2html - Just convert you markdown to HTML with basic style. 
             </div>
             <div class="content">
                 <div class="tab-title">
                     <button @click="whichTab = 'md-tab'">markdown</button>
                     <button @click="whichTab = 'css-tab'">css</button>
                     <button @click="whichTab = 'config-tab'">config</button>
-                    <button @click="whichTag = 'about-tab'">about</button>
+                    <button @click="whichTab = 'about-tab'">about</button>
                     <button @click="download()">download</button>
                 </div>
 
@@ -36,7 +36,6 @@
                     <p> enjoy! </p>
 
                     <p> by <a href="http://www.andyiac.com" target="_blank"> andyiac</a> </p>
-
                 </div>
             </div>
         </div>
@@ -183,14 +182,8 @@ export default{
             border-bottom: 1px solid #ccc;
         }
     }
-    .md-tab{
-        display: none;
-    }
-    .css-tab{
-        display: none;
-    }
-    .config-tab{
-        display: none;
+    .tab{
+        display: none
     }
     .active{
         display: block;
@@ -214,6 +207,7 @@ button{
 .CodeMirror {
     background: #f8f8f8; 
     border: 1px solid #eee;
+    min-height: 60px;
     height: auto;
 }
 </style>
