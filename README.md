@@ -11,7 +11,5 @@ A simple md2html tool is enough for me .
 enjoy!
 
 
-by andyiac
-
 <p> by <a href="http://www.andyiac.com" target="_blank"> andyiac</a> </p>
 
