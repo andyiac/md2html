@@ -16,9 +16,6 @@ const router = new Router({
         {
             path: '/',
             component: Md2Html
-        },{
-            path: '/about',
-            component: About
         }
     ]
 })
