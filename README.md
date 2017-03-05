@@ -1,20 +1,17 @@
-# githot-vue
+# md2html
 
 
-GitHot.io 是一个基于 vue2.0 的帮你迅速查看 GitHub Trending 的开源项目 
+md2html is a simple tool to convert your markdown file to pure html with some basic css style, you can use this simple tool with GitHub pages , you will find it very easy to build a static web site , Also we have prepared some basic css for you, of course if you know some css you can edit the style as you like.
 
-www.githot.io
 
-## skill stack
+Jekyll is too heavy for me, and jekyll is base on Ruby , Ruby is not family to me , Also in some country for some reason like GFW you should have a vpn to access the RubyGems. When you have more markdown file you will find Jekyll is slow , Becouse Jekyll rerender the whole markdown file everytime you build.
+A simple md2html tool is enough for me .
 
-- vue2.0
-- vue-resource
-- vue-router
 
-GitHot is an project that will help you find world most popular project and person . 
+enjoy!
 
-你可以从 GitHot Android 开源项目感兴趣 . 
 
-或许还可能对 coderyi同学的 iOS GitHub 开源客户端 Monkey 感兴趣 .
+by andyiac
 
-关于 GitHot 如果你有一些神奇的想法，欢迎和我交流 :-D ，在下微信 andyiac (添加请注明 githot 交流) 
+<p> by <a href="http://www.andyiac.com" target="_blank"> andyiac</a> </p>
+
